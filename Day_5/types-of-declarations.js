@@ -47,5 +47,3 @@ const fullDetails = {
 };
 
 console.log(fullDetails);
-
-sura;
