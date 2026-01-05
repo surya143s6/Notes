@@ -1,64 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beast</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<style>
-    .beast img{
-            object-fit: cover;
-            height: auto;
-            width: 300px;
-            padding: 5px 30px ;
-            border-radius: 50px;
-            margin-top: 15px;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Border</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        :root {
+    
+    --fs-base: 1rem;          
+    --fs-large: 1.5rem;       
+    --space-md: 1.5rem;       
+    --border-main: rebeccapurple;
+    --border-top: #bfec1f;
+    --info-bg: #9cdbfff7;
+    --info-border: #0ea7fff7;
 
-        .beast{
-            background-color: oklch(0.16 0.05 28.72); 
-            text-align: center;
-        }
-        
-        .head{
-            color: white;
-            font-family: "Roboto", sans-serif;
-            font-size: 50px;
-            margin: 1px ;
-            padding-bottom: 10px;
-        }
+   
+    --border-width: 0.625rem; 
+    --border-left-wide: calc(var(--border-width) + 0.3125rem);
+    --radius-lg: 1.875rem;    
+    --radius-md: 0.9375rem;   
+  }
 
-        .movie-info{
-            font-family: "Roboto", sans-serif;
-            color: oklch(0.65 0.04 20.26);
-        }
-        .dot{
-            color: white;
-            font-family: "Roboto", sans-serif;
-        }
+  body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-family: "Roboto", sans-serif;
+  }
 
-        .info{
-            font-family: "Urbanist", sans-serif;
-            width: 400px;
-            margin: auto;
-            color: oklch(0.94 0.03 20.33);
-            padding: 20px;
-            letter-spacing: 1.5px;
+  .content {
+    font-size: var(--fs-large);
+    width: calc(25rem); 
+    padding: var(--space-md);
+    border: var(--border-width) dashed var(--border-main);
+    border-top-color: var(--border-top);
+    border-left-width: var(--border-left-wide);
+    border-radius: var(--radius-lg);
+  }
 
-        }
-</style>
-</head>
-<body>
-    <div class = "beast">
-        <img src="https://e0.pxfuel.com/wallpapers/426/401/desktop-wallpaper-thalapathy-vijay-65-movie-beast-official-first-look-poster-beast-mode-navel-queens-beast-vijay.jpg" alt="sirai">
-        <h2 class = "head">Beast</h2>
-        <span class = "movie-info">2022</span>  <span class = "dot">•</span>  <span class = "movie-info">Action / Dark comedy</span>  <span class = "dot">•</span>  <span class = "movie-info">2h 38m</span>
-        <p class = "info">Beast is an upcoming Indian Tamil-language action thriller film written and directed by Nelson and produced by Sun Pictures. The film stars Vijay and Pooja Hegde, while Selvaraghavan, Yogi Babu and Redin Kingsley play supporting roles.</p>
-     </div>
-</body>
+  .info {
+    font-size: var(--fs-large);
+    width: calc(50rem);
+    background: var(--info-bg);
+    padding: var(--space-md);
+    border-left: var(--border-width) solid var(--info-border);
+    border-radius: var(--radius-md);
+  }
+
+
+    </style>
+  </head>
+  <body>
+   
+
+    <div class="info">
+      <h4>Intended Audience</h4>
+      <p>
+        This tutorial assumes that you already have a static React site
+        (Gatsby/Next) being deployed on Vercel or Netlify.
+      </p>
+      <p>
+        It's written with the intermediate React developer in mind; if you're
+        newer to the modern JS ecosystem, it might be a bit hard to follow.
+      </p>
+    </div>
+  </body>
 </html>
