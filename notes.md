@@ -55,6 +55,19 @@
 
 
 
+## Day-16
+
+## Flex article link
+1. https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/
+2. https://www.flexboxgame.com/
+3. https://bennettfeely.com/clippy/
+   
+# flex
+main for row - Justify content
+cross for row  - Align Items, align self also working 
+
+- fr stands for Fractional unit 1:1
+
 
 
    
