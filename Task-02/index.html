@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Country Cards</title>
+  </head>
+  <body>
+    <script>
+      document.body.style.fontFamily = "Arial";
+      document.body.style.background = "#f4f4f4";
+      document.body.style.padding = "20px";
+
+      const container = document.createElement("div");
+      container.style.display = "flex";
+      container.style.flexWrap = "wrap";
+      container.style.gap = "20px";
+      document.body.appendChild(container);
+
+      const countries = [
+        {
+          name: "India",
+          flag: "https://flagcdn.com/w320/in.png",
+          pop: "1.39B",
+          region: "Asia",
+          capital: "New Delhi",
+        },
+        {
+          name: "Germany",
+          flag: "https://flagcdn.com/w320/de.png",
+          pop: "81M",
+          region: "Europe",
+          capital: "Berlin",
+        },
+        {
+          name: "USA",
+          flag: "https://flagcdn.com/w320/us.png",
+          pop: "323M",
+          region: "Americas",
+          capital: "Washington D.C",
+        },
+        {
+          name: "Brazil",
+          flag: "https://flagcdn.com/w320/br.png",
+          pop: "206M",
+          region: "Americas",
+          capital: "Brasília",
+        },
+        {
+          name: "Iceland",
+          flag: "https://flagcdn.com/w320/is.png",
+          pop: "334K",
+          region: "Europe",
+          capital: "Reykjavík",
+        },
+      ];
+
+      for (let i = 0; i < countries.length; i++) {
+        const c = countries[i];
+
+        const card = document.createElement("div");
+        card.style.width = "250px";
+        card.style.background = "white";
+        card.style.borderRadius = "10px";
+        card.style.boxShadow = "0 4px 8px #ccc";
+
+        card.innerHTML = `
+      <img src="${c.flag}" style="width:100%;height:150px">
+      <div style="padding:15px">
+        <h3>${c.name}</h3>
+        <p>Population: ${c.pop}</p>
+        <p>Region: ${c.region}</p>
+        <p>Capital: ${c.capital}</p>
+      </div>
+    `;
+
+        container.appendChild(card);
+      }
+    </script>
+  </body>
+</html>

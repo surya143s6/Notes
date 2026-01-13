@@ -1,60 +1,16 @@
-:root{
-    --primary-gap-gp:15px;
-    --primary-justify-content:space-between;
-    --primary-font-family:"Alfa Slab One", serif;
-    --primary-padding-prct:25px;
+.top-container{
+    display: flex;
+    justify-content: space-between;
 }
-body{
-    background-image: url(./image-header.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size:100% 100%
-
-}
-
-.main-container {
-    display:flex;
-    justify-content: var(--primary-justify-content);
-    align-items: center;
     
-
+.navbar-container{
+    display:flex;
+    
 }
 
-.main-container > ol {
+.navbar-container > ol{
+    display:flex;
     list-style-type: none;
-    display:flex;
-    gap:var(--primary-gap-gp);
-    
+    gap:20px;
 }
-
-.main-container ol a{
-    text-decoration: none;
-    font-family: var(--primary-font-family);
-    color: white;
-    padding:10px;
-}
-
-.main-container > button{
-    background-color: white;
-    border-radius: 2rem;
-    padding:calc(var(--primary-padding-prct)*0.5);
-    border:none;
-    
-}
-
-.main-container > h3{
-    color: white;
-}
-
-div{
-    color: white;
-    text-align: center;
-    font-size: 2.5rem;
-    font-family: "Fraunces";
-    letter-spacing: 0.5rem;
-    
-}
-
-
-
-
+.navbar-container 

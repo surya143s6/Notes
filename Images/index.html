@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Task 2.1 -->
+    <h2>Hobbies</h2>
+    <ul class="hobbies-container"></ul>
+
+    <script>
+      const hobbies = [
+        "📚 Reading",
+        "🎨 Painting",
+        "📸 Photography",
+        "🥾 Hiking",
+        "🌱 Gardening",
+        "👨‍🍳 Cooking",
+        "🎶 Playing musical instruments",
+        "💃 Dancing",
+        "✈️ Traveling",
+        "🧶 Knitting",
+      ];
+
+      const container = document.querySelector(".hobbies-container");
+
+      for (let hobby of hobbies) {
+        const li = document.createElement("li");
+        li.textContent = hobby;
+        container.appendChild(li);
+      }
+
+      //const container = document.querySelector("hobbies-container");
+      //   for (let i = 0; i < hobbies.length; i++) {
+      //     const li = document.createElement("li");
+      //     li.textContent = hobbies[i];
+      //     container.appendChild(li);
+      //   }
+      //   document.body.appendChild(hobbies);
+    </script>
+  </body>
+</html>
