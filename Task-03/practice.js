@@ -283,11 +283,11 @@
 // User not found
 // Deepak has no friends 🥲
 
-// const users = [
-//   { id: 1, name: "Alice", friends: [{ name: "Bob" }, { name: "Charlie" }] },
-//   { id: 2, name: "David", friends: [{ name: "Eve" }, { name: "Frank" }] },
-//   { id: 4, name: "Deepak", friends: [] },
-// ];
+const users = [
+  { id: 1, name: "Alice", friends: [{ name: "Bob" }, { name: "Charlie" }] },
+  { id: 2, name: "David", friends: [{ name: "Eve" }, { name: "Frank" }] },
+  { id: 4, name: "Deepak", friends: [] },
+];
 
 // const getFirstFriendName = (users, userId) => {
 //   const friend = users.find((friendName) => friendName.id === userId);
@@ -334,20 +334,34 @@
 // Expected Output
 // Charlie is the top scorer with a score of 92
 
-const scores = [
-  { name: "Alice", score: 90 },
-  { name: "Bob", score: 85 },
-  { name: "Charlie", score: 92 },
-  { name: "Diana", score: 88 },
-];
+// const scores = [
+//   { name: "Alice", score: 90 },
+//   { name: "Bob", score: 85 },
+//   { name: "Charlie", score: 92 },
+//   { name: "Diana", score: 88 },
+// ];
 
-const getTopScorer = (scores) => {
-  const topscore = scores.reduce((acc, curr) =>
-    curr.score > acc.score ? curr : acc
-  );
-  return `${topscore.name} is the top scorer with a score of ${topscore.score}`;
-};
+// const getTopScorer = (scores) => {
+//   const topscore = scores.reduce((acc, curr) =>
+//     curr.score > acc.score ? curr : acc
+//   );
+//   return `${topscore.name} is the top scorer with a score of ${topscore.score}`;
+// };
 
-console.log(getTopScorer(scores));
+// console.log(getTopScorer(scores));
 
-console.log(getTopScorer(scores));
+// console.log(getTopScorer(scores));
+
+
+// function listOrders(...orderItems) {
+//   return orderItems
+//     .map(order => {
+//       // Handle undefined or invalid order
+//       if (!order || !order.dishName || !order.category) {
+//         return "Unknown Dish (Unknown Category)";
+//       }
+
+//       return `${order.dishName} (${order.category})`;
+//     })
+//     .join(", ");
+// }
