@@ -52,13 +52,23 @@ const moreOrders = [
     ratings: [5, 4, 5],
   },
 ];
-const mergeOrders = (baseOrders, extraOrders = []) => {
-  return [...baseOrders, ...extraOrders];
-};
-const merged1 = mergeOrders(orders, moreOrders);
-console.log(merged1.length);
-// 7
 
-const merged2 = mergeOrders(orders);
-console.log(merged2.length);
-// 5
+const getDishNamesByIds = (orders, ...ids) =>
+  `Selected Dishes: ${ids
+    .map(
+      (id) =>
+        orders.find((order) => order.id === id)?.dishName ?? "Unknown Dish"
+    )
+    .join(", ")}`;
+
+console.log(getDishNamesByIds(orders, 1, 3, 5));
+// Selected Dishes: Burger, Sushi, Pasta
+
+console.log(getDishNamesByIds(orders, 1, 6));
+// Selected Dishes: Burger, Unknown Dish
+
+console.log(getDishNamesByIds(orders, 5, 1));
+// Selected Dishes: Pasta, Burger
+
+console.log(getDishNamesByIds(orders, 3, 3, 999));
+// Selected Dishes: Sushi, Sushi, Unknown Dish
