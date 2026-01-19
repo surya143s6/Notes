@@ -95,6 +95,9 @@ const listOrders = (...orderItems) =>
     )
     .join(",");
 
+    // function definition : It collects all arguments passed to the function into an array
+    //.map() goes through each order object in the array
+
 // console.log(listOrders(...orders));
 // Burger (Fast Food), Pizza (Italian), Sushi (Japanese), Salad (Healthy), Pasta (Italian)
 

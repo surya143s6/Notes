@@ -57,7 +57,7 @@ const getDishNamesByIds = (orders, ...ids) =>
   `Selected Dishes: ${ids
     .map(
       (id) =>
-        orders.find((order) => order.id === id)?.dishName ?? "Unknown Dish"
+        orders.find((order) => order.id === id)?.dishName ?? "Unknown Dish",
     )
     .join(", ")}`;
 
