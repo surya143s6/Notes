@@ -13,5 +13,22 @@ const getTotalRatingsForChefs = (orderList) => {
   }, {});
 };
 
+const getTotalRatingsForChefs1 = (orderList) => {
+  return orderList.reduce((acc, curr) => {
+    acc[curr.chef] = acc[curr.chef]
+      ? acc[curr.chef] + curr.ratings.length
+      : curr.ratings.length;
+    return acc;
+  }, {});
+};
+
 console.log(getTotalRatingsForChefs(chefOrders));
 // { "John Doe": 5, "Jane Smith": 7, "Tom Brown": 3 }
+
+let x = {};
+
+x["Jack"] = 5;
+
+x["Jack"] = x["Jack"] ? x["Jack"] + 10 : 10;
+
+console.log(x);

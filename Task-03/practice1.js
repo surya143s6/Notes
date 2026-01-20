@@ -69,7 +69,7 @@ function listOrders2(...orderItems) {
       (order) =>
         ` ${order?.dishName ?? "Unknown Dish"} (${
           order?.category ?? "Unknown Category"
-        })`
+        })`,
     )
     .join(",");
 }
@@ -80,7 +80,7 @@ const listOrders3 = (...orderItems) => {
       (order) =>
         ` ${order?.dishName ?? "Unknown Dish"} (${
           order?.category ?? "Unknown Category"
-        })`
+        })`,
     )
     .join(",");
 };
@@ -91,12 +91,12 @@ const listOrders = (...orderItems) =>
       (order) =>
         ` ${order?.dishName ?? "Unknown Dish"} (${
           order?.category ?? "Unknown Category"
-        })`
+        })`,
     )
     .join(",");
 
-    // function definition : It collects all arguments passed to the function into an array
-    //.map() goes through each order object in the array
+// function definition : It collects all arguments passed to the function into an array
+//.map() goes through each order object in the array
 
 // console.log(listOrders(...orders));
 // Burger (Fast Food), Pizza (Italian), Sushi (Japanese), Salad (Healthy), Pasta (Italian)

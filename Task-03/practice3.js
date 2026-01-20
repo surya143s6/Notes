@@ -54,6 +54,7 @@ const moreOrders = [
 ];
 
 const getDishNamesByIds = (orders, ...ids) =>
+  
   `Selected Dishes: ${ids
     .map(
       (id) =>
@@ -67,8 +68,8 @@ console.log(getDishNamesByIds(orders, 1, 3, 5));
 console.log(getDishNamesByIds(orders, 1, 6));
 // Selected Dishes: Burger, Unknown Dish
 
-console.log(getDishNamesByIds(orders, 5, 1));
-// Selected Dishes: Pasta, Burger
+// console.log(getDishNamesByIds(orders, 5, 1));
+// // Selected Dishes: Pasta, Burger
 
-console.log(getDishNamesByIds(orders, 3, 3, 999));
+// console.log(getDishNamesByIds(orders, 3, 3, 999));
 // Selected Dishes: Sushi, Sushi, Unknown Dish
