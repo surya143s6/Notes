@@ -42,12 +42,45 @@
 
       //  Your code - Use Callback hell pattern
 
+      // const h1 = document.getElementById("count");
+
+      // let i = 5;
+
+      // const pongalWish = new Promise((resolve, reject) => {
+      //   const timer = setInterval(() => {
+      //     if (i >= 0) {
+      //       h1.textContent = i;
+      //       i--;
+      //     } else {
+      //       clearInterval(timer);
+      //       resolve("🎉 Happy Pongal 🎉");
+      //     }
+      //   }, 1000);
+      // });
+
+      // pongalWish.then((message) => {
+      //   h1.textContent = message;
+      // });
       const h1 = document.getElementById("count");
-      const pongalWish = new Promise((resolve, reject) => {
-        const timer = setInterval(() => {
-          if (i >= 0){
+
+      let i = 5;
+
+      const pongalWish = new Promise((resolve) => {
+        function countdown() {
+          if (i >= 0) {
+            h1.textContent = i;
+            i--;
+            setTimeout(countdown, 1000);
+          } else {
+            resolve("🎉 Happy Pongal 🎉");
           }
-        });
+        }
+
+        countdown();
+      });
+
+      pongalWish.then((message) => {
+        h1.textContent = message;
       });
     </script>
   </body>
