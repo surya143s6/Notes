@@ -94,4 +94,4 @@ task4();
 // Task 1.5 📋
 // Display the Top 10 most populated countries on the screen as a list.
 
-// Item Format:
+

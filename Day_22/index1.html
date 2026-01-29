@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>My todo List</h2>
+    <ol class="todo-fullcontainer"></ol>
+    <script>
+      async function task() {
+        const response = await fetch(
+          "https://6971d21b32c6bacb12c49d77.mockapi.io/todos",
+          { method: "GET" },
+        );
+        const todos = await response.json();
+        console.log(todos);
+
+        const todofullcontainer = document.querySelector(".todo-fullcontainer")
+        todofullcontainer.innerHTML = todos.map((todo) => `<li>`)
+      }
+    </script>
+  </body>
+</html>
