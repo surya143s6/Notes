@@ -41,14 +41,48 @@
 # - Doors - 4
 
 
-# task:1
+# task:1.1
 
-class Car:
-    def __init__(self,wheels,engnine,model,doors):
-        self.wheels = wheels
-        self.engnine = engnine
-        self.model = model
-        self.doors = doors
+# class Car:
+#     def __init__(self,wheels,engnine,model,doors):
+#         self.wheels = wheels
+#         self.engnine = engnine
+#         self.model = model
+#         self.doors = doors
 
-surya=Car(4,"v4","tata",4)
-print(surya)
+# surya=Car(4,"v4","tata",4)
+# print(surya)
+
+
+# task1.2
+
+
+# ## Task 1.1
+# Create blueprint
+
+# ### Account
+# 1. acc_no
+# 2. name
+# 3. balance
+
+
+## Task 1.2
+# Create 3 account
+# 1. nk - 50_000
+# 2. rishi - 3_00_000
+# 3. puspha - 10_00_000
+
+class Account:
+    def __init__(self, acc_no, name, balance):
+        self.acc_no = acc_no
+        self.name = name
+        self.balance = balance
+
+bank = Account(101022531, "surya", 50000)
+print(bank.balance)
+
+bank1 = Account(101022532, "rio", 70000)
+print(bank1.balance)
+
+bank2 = Account(101022533, "james", 60000)
+print(bank2.balance)
