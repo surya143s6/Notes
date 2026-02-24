@@ -99,19 +99,37 @@
 
 
 # Mix Data types
-pirate = {
-    "name": "Moneky D. Luffy",
-    "age": 25,
-    "crew_name": "Straw hat pirates",
-    "crew_members": ["Zoro", "Sanji", "Nami", "Chopper"],
-    "position": "captain",
-}
+# pirate = {
+#     "name": "Moneky D. Luffy",
+#     "age": 25,
+#     "crew_name": "Straw hat pirates",
+#     "crew_members": ["Zoro", "Sanji", "Nami", "Chopper"],
+#     "position": "captain",
+# }
 
-print(pirate["crew_members"][1])
+# print(pirate["crew_members"][1])
 
 
-pirate["age"] += 1
-print(pirate["age"])
-print(pirate)
+# pirate["age"] += 1
+# print(pirate["age"])
+# print(pirate)
 
 # Increase age by 1
+
+
+
+books = [
+    {"title": "Infinite Jest", "rating": 4.5, "genre": "Fiction"},
+    {"title": "The Catcher in the Rye", "rating": 3.9, "genre": "Fiction"},
+    {"title": "Sapiens", "rating": 4.9, "genre": "History"},
+    {"title": "A Brief History of Time", "rating": 4.8, "genre": "Science"},
+    {"title": "Clean Code", "rating": 4.7, "genre": "Technology"},
+]
+
+titles=[]
+
+for book in books:
+    titles.append(book["title"])
+
+print(titles)
+ # ["Infinite Jest",  "The Catcher in the Rye", "Sapiens",  "A Brief History of Time",  "Clean Code"]
