@@ -31,10 +31,10 @@
 # Hint - range, len
 
 
-flowers = ["💐", "🌷", "🌼", "🌷", "🌺"]
+# flowers = ["💐", "🌷", "🌼", "🌷", "🌺"]
 
-for i in range(len(flowers)):
-    print("flower", i+1, "-", flowers[i])
+# for i in range(len(flowers)):
+#     print("flower", i+1, "-", flowers[i])
     
 
 # Expected output
@@ -44,3 +44,14 @@ for i in range(len(flowers)):
 # Flower 4 - 🌷
 # Flower 5 - 🌺
 
+
+# # Task 1.2: Double all the numbers
+marks = [80, 90, 100, 60, 85]
+# marks[1] = 60
+# for i in range(len(marks)):
+#     marks[i]=marks[i]*2
+#
+# print(marks)
+
+for mark in marks:
+    print(mark)
