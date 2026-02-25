@@ -77,12 +77,26 @@ class Account:
         self.acc_no = acc_no
         self.name = name
         self.balance = balance
+        
+    def display_balance(self):
+        return f"Your balance is: ₹{self.balance:,.2f}"
+
 
 bank = Account(101022531, "surya", 50000)
-print(bank.balance)
-
 bank1 = Account(101022532, "rio", 70000)
-print(bank1.balance)
-
 bank2 = Account(101022533, "james", 60000)
-print(bank2.balance)
+
+print(bank.display_balance())  
+print(bank1.display_balance())
+print(bank2.display_balance())
+
+
+
+
+
+
+
+
+
+
+
