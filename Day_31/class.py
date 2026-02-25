@@ -80,15 +80,33 @@ class Account:
         
     def display_balance(self):
         return f"Your balance is: ₹{self.balance:,.2f}"
+    
+    def withdraw(self, amount):
+        if amount < 0:
+            return "Invalid amount"
+        if amount > self.balance:
+            return f"Insufficient balance. Your balance is ₹{self.balance:,.2f}"
+        
+        self.balance = self.balance - amount
+        return f"Success. Your balance is: ₹{self.balance:,.2f}"
 
 
 bank = Account(101022531, "surya", 50000)
-bank1 = Account(101022532, "rio", 70000)
-bank2 = Account(101022533, "james", 60000)
 
-print(bank.display_balance())  
-print(bank1.display_balance())
-print(bank2.display_balance())
+print(bank.withdraw(5000))
+print(bank.display_balance())
+
+# bank1 = Account(101022532, "rio", 70000)
+# bank2 = Account(101022533, "james", 60000)
+
+
+# print(bank.display_balance())  
+# print(bank1.display_balance())
+# print(bank2.display_balance())
+
+
+
+
 
 
 
