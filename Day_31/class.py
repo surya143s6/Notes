@@ -73,6 +73,7 @@
 # 3. puspha - 10_00_000
 
 class Account:
+    interest_rate=0.02
     def __init__(self, acc_no, name, balance):
         self.acc_no = acc_no
         self.name = name
@@ -89,20 +90,45 @@ class Account:
         
         self.balance = self.balance - amount
         return f"Success. Your balance is: ₹{self.balance:,.2f}"
+    
+    def deposit(self,amount):
+        if amount < 0:
+            return "Invalid amount"
+        self.balance = self.balance + amount
+        return f"Success. Your balance is: ₹{self.balance:,.2f}"
+    
+    def apply_interest(self): 
+        self.balance= self.balance * Account.interest_rate + self.balance 
+        return f"Success : Applied interest rate of {Account.interest_rate:.2%}. {self.display_balance()}"
+    
+    @classmethod
+    def update_interest_rate(cls, new_interest_rate):
+        cls.interest_rate=new_interest_rate /100
+        return f"Sucess. Interest rate "
+    
+        
 
 
-bank = Account(101022531, "surya", 50000)
+surya= Account(101, "surya", 50000)
+rio = Account(102,"rio",70000)
+james=Account(103,"james",60000)
+mohan=Account(104,"mohan",40000)
+jim=Account(105,"jim",30000)
+david=Account(106,"david",25000)
 
-print(bank.withdraw(5000))
-print(bank.display_balance())
+print(surya.withdraw(5000))
+print(surya.display_balance())
+print(surya.deposit(10000))
+print(surya.deposit)
+print(surya.apply_interest)
 
-# bank1 = Account(101022532, "rio", 70000)
-# bank2 = Account(101022533, "james", 60000)
+# print(rio.withdraw(3000))
+# print(rio.display_balance())
+
+# print(james.withdrawithdraw(2000))
+# print(james.display_balance())
 
 
-# print(bank.display_balance())  
-# print(bank1.display_balance())
-# print(bank2.display_balance())
 
 
 
