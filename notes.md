@@ -290,3 +290,80 @@ WHERE employees.building IS NULL;
 
 ![alt text](<Screenshot 2026-02-26 175410.png>)
 
+# Excercise 9
+
+- List all movies and their combined sales in millions of dollars
+```
+SELECT title,
+(domestic_sales + international_sales)/1000000
+FROM boxoffice as bo left join 
+movies as mv on mv.id=bo.movie_id;
+```
+- List all movies and their ratings in percent
+```
+SELECT title,rating*10
+as per FROM boxoffice as bo
+left join movies as mv
+on mv.id = movie_id;
+```
+- List all movies that were released on even number years
+```
+SELECT title,year*10
+as per FROM movies as bo
+WHERE year %2==0;
+```
+
+## Screenshot
+
+![alt text](<Screenshot 2026-02-27 102137.png>)
+
+# Excercise 10
+
+- Find the longest time that an employee has been at the studio
+```
+SELECT role,
+max(years_employed) as
+FROM employees; 
+```
+- For each role, find the average number of years employed by employees in that role
+```
+SELECT role,
+avg(years_employed)
+FROM employees group by role; 
+```
+- Find the total number of employee years worked in each building
+```
+SELECT building,
+sum(years_employed)
+FROM employees group by building; 
+```
+
+## Screenshot
+![alt text](<Screenshot 2026-02-27 103032.png>)
+
+# Excercise 11
+
+- Find the number of Artists in the studio (without a HAVING clause) 
+```
+select role,count(role) from employees;
+```
+- Find the number of Employees of each role in the studio 
+```
+select role,count(role) from employees
+group by role;
+```
+- Find the total number of years employed by all Engineers
+```
+select role,sum(years_employed)
+from employees
+where role like "%Engineer%";
+```
+
+## Screenshot
+
+![alt text](<Screenshot 2026-02-27 122239.png>)
+
+# Excercise 12
+
+- Find the number of movies each director has directed
+- Find the total domestic and international sales that can be attributed to each director
